@@ -2,6 +2,8 @@ const { Component } = require('@serverless/core')
 
 class GlobalVar extends Component {
   async default(inputs = {}) {
+    this.state = inputs
+    await this.save()
     return inputs
   }
 
